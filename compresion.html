@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compresión de Imágenes Web</title>
+    <link rel="stylesheet" href="assets/css/compresion.css" />
+</head>
+
+<body>
+    <a href="portfolio.html" class="btn-back" aria-label="Volver al inicio">
+<svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    width="24" 
+    height="24" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    stroke-width="2" 
+    stroke-linecap="round" 
+    stroke-linejoin="round">
+      <line x1="19" y1="12" x2="5" y2="12"></line>
+      <polyline points="12 19 5 12 12 5"></polyline>
+  </svg></a>
+
+
+<header>
+    <h1>Optimización de Imágenes para la Web</h1>
+    <p>Comparativa de peso, formato y compresión</p>
+    <p>(Para los JPG he usado Squoosh, para los PNG usé TinyPNG y para los gif EzGIF)</p>
+</header>
+
+<section>
+    <h2>Optimización conservando el formato</h2>
+
+    <div class="gallery">
+
+        <!-- ==== PLANTILLA (duplica 16 veces) ==== -->
+        <article class="card">
+            <h3>giphy.gif</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/giphy.gif" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-formato/giphy.gif" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>81.9 KB</td></tr>
+                <tr><td>Peso final</td><td>75.2 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">6%</td></tr>
+                <tr><td>Formato</td><td>GIF</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pexels-ash-craig-122861-376464.jpg</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pexels-ash-craig-122861-376464.jpg" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-formato/pexels-ash-craig-122861-376464.jpg" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>425.9 KB</td></tr>
+                <tr><td>Peso final</td><td>388.4 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">9%</td></tr>
+                <tr><td>Formato</td><td>JPG</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pexels-daniela-elena-tentis-118658-262959.jpg</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pexels-daniela-elena-tentis-118658-262959.jpg" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-formato/pexels-daniela-elena-tentis-118658-262959.jpg" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>2.6 MB</td></tr>
+                <tr><td>Peso final</td><td>2.3 MB</td></tr>
+                <tr><td>Reducción</td><td class="good">10%</td></tr>
+                <tr><td>Formato</td><td>JPG</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pexels-elevate-1267320.jpg</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pexels-elevate-1267320.jpg" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-formato/pexels-elevate-1267320.jpg" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>8.3 MB</td></tr>
+                <tr><td>Peso final</td><td>7.54 MB</td></tr>
+                <tr><td>Reducción</td><td class="good">9%</td></tr>
+                <tr><td>Formato</td><td>JPG</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pexels-ella-olsson-572949-1640777.jpg</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pexels-ella-olsson-572949-1640777.jpg" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-formato/pexels-ella-olsson-572949-1640777.jpg" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>1.6 MB</td></tr>
+                <tr><td>Peso final</td><td>1.47 MB</td></tr>
+                <tr><td>Reducción</td><td class="good">9%</td></tr>
+                <tr><td>Formato</td><td>JPG</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pexels-janetrangdoan-1128678.jpg</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pexels-janetrangdoan-1128678.jpg" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-formato/pexels-janetrangdoan-1128678.jpg" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>372.2 KB</td></tr>
+                <tr><td>Peso final</td><td>338 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">9%</td></tr>
+                <tr><td>Formato</td><td>JPG</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pexels-sydney-troxell-223521-708488.jpg</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pexels-sydney-troxell-223521-708488.jpg" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-formato/pexels-sydney-troxell-223521-708488.jpg" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>252.4 KB</td></tr>
+                <tr><td>Peso final</td><td>228 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">10%</td></tr>
+                <tr><td>Formato</td><td>JPG</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pexels-valeriya-842571.jpg</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pexels-valeriya-842571.jpg" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-formato/pexels-valeriya-842571.jpg" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>1.1 MB</td></tr>
+                <tr><td>Peso final</td><td>1 MB</td></tr>
+                <tr><td>Reducción</td><td class="good">10%</td></tr>
+                <tr><td>Formato</td><td>JPG</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pexels-valeriya-1199957.jpg</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pexels-valeriya-1199957.jpg" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-formato/pexels-valeriya-1199957.jpg" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>722.5 KB</td></tr>
+                <tr><td>Peso final</td><td>662 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">8%</td></tr>
+                <tr><td>Formato</td><td>JPG</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pexels-vanmalidate-769289.jpg</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pexels-vanmalidate-769289.jpg" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-formato/pexels-vanmalidate-769289.jpg" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>350.6 KB</td></tr>
+                <tr><td>Peso final</td><td>320 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">9%</td></tr>
+                <tr><td>Formato</td><td>JPG</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pexels-vanmalidate-784633.jpg</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pexels-vanmalidate-784633.jpg" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-formato/pexels-vanmalidate-784633.jpg" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>286.5</td></tr>
+                <tr><td>Peso final</td><td>257 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">10%</td></tr>
+                <tr><td>Formato</td><td>JPG</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pngtree-an-illustration-of-a-plate-full-of-food-on-it-clipart-vector-png-image_6864054.png</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pngtree-an-illustration-of-a-plate-full-of-food-on-it-clipart-vector-png-image_6864054.png" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-formato/pngtree-an-illustration-of-a-plate-full-of-food-on-it-clipart-vector-png-image_6864054.png" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>134.9 KB</td></tr>
+                <tr><td>Peso final</td><td>38.1 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">72%</td></tr>
+                <tr><td>Formato</td><td>PNG</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pngtree-burger-street-food-digital-illustration-png-image_14591989.png</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pngtree-burger-street-food-digital-illustration-png-image_14591989.png" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-formato/pngtree-burger-street-food-digital-illustration-png-image_14591989.png" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>1.5 MB</td></tr>
+                <tr><td>Peso final</td><td>1.4MB</td></tr>
+                <tr><td>Reducción</td><td class="good">2%</td></tr>
+                <tr><td>Formato</td><td>PNG</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pngtree-food-burger-set-png-image_9112014.png</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pngtree-food-burger-set-png-image_9112014.png" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-formato/pngtree-food-burger-set-png-image_9112014.png" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>427 KB</td></tr>
+                <tr><td>Peso final</td><td>361.1 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">15%</td></tr>
+                <tr><td>Formato</td><td>PNG</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pngtree-sticker-with-a-plate-filled-with-food-and-drinks-clipart-vector-png-image_7026639.png</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pngtree-sticker-with-a-plate-filled-with-food-and-drinks-clipart-vector-png-image_7026639.png" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-formato/pngtree-sticker-with-a-plate-filled-with-food-and-drinks-clipart-vector-png-image_7026639.png" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>29 KB</td></tr>
+                <tr><td>Peso final</td><td>26.2 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">9%</td></tr>
+                <tr><td>Formato</td><td>PNG</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>taco-acegif-14-hot-taco.gif</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/taco-acegif-14-hot-taco.gif" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-formato/taco-acegif-14-hot-taco.gif" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>162.2 KB</td></tr>
+                <tr><td>Peso final</td><td>105 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">33%</td></tr>
+                <tr><td>Formato</td><td>GIF</td></tr>
+            </table>
+        </article>
+        
+
+    </div>
+</section>
+
+<section>
+    <h2>Optimización cambiando el formato</h2>
+
+    <div class="gallery">
+                <article class="card">
+            <h3>giphy.gif</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/giphy.gif" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-conversion/giphy.webp" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>81.9 KB</td></tr>
+                <tr><td>Peso final</td><td>28.7 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">64%</td></tr>
+                <tr><td>Formato</td><td>GIF</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pexels-ash-craig-122861-376464.jpg</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pexels-ash-craig-122861-376464.jpg" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-conversion/pexels-ash-craig-122861-376464.avif" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>425.9 KB</td></tr>
+                <tr><td>Peso final</td><td>123 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">71   %</td></tr>
+                <tr><td>Formato</td><td>AVIF</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pexels-daniela-elena-tentis-118658-262959.jpg</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pexels-daniela-elena-tentis-118658-262959.jpg" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-conversion/pexels-daniela-elena-tentis-118658-262959.avif" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>2.6 MB</td></tr>
+                <tr><td>Peso final</td><td>863 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">67%</td></tr>
+                <tr><td>Formato</td><td>AVIF</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pexels-elevate-1267320.jpg</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pexels-elevate-1267320.jpg" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-conversion/pexels-elevate-1267320.avif" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>8.3 MB</td></tr>
+                <tr><td>Peso final</td><td>5.41 MB</td></tr>
+                <tr><td>Reducción</td><td class="good">35%</td></tr>
+                <tr><td>Formato</td><td>AVIF</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pexels-ella-olsson-572949-1640777.jpg</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pexels-ella-olsson-572949-1640777.jpg" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-conversion/pexels-ella-olsson-572949-1640777.avif" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>1.6 MB</td></tr>
+                <tr><td>Peso final</td><td>798 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">51%</td></tr>
+                <tr><td>Formato</td><td>AVIF</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pexels-janetrangdoan-1128678.jpg</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pexels-janetrangdoan-1128678.jpg" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-conversion/pexels-janetrangdoan-1128678.avif" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>372.2 KB</td></tr>
+                <tr><td>Peso final</td><td>155 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">58%</td></tr>
+                <tr><td>Formato</td><td>AVIF</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pexels-sydney-troxell-223521-708488.jpg</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pexels-sydney-troxell-223521-708488.jpg" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-conversion/pexels-sydney-troxell-223521-708488.avif" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>252.4 KB</td></tr>
+                <tr><td>Peso final</td><td>85.8 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">66%</td></tr>
+                <tr><td>Formato</td><td>AVIF</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pexels-valeriya-842571.jpg</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pexels-valeriya-842571.jpg" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-conversion/pexels-valeriya-842571.avif" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>1.1 MB</td></tr>
+                <tr><td>Peso final</td><td>240 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">79%</td></tr>
+                <tr><td>Formato</td><td>AVIF</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pexels-valeriya-1199957.jpg</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pexels-valeriya-1199957.jpg" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-conversion/pexels-valeriya-1199957.avif" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>722.5 KB</td></tr>
+                <tr><td>Peso final</td><td>198 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">73%</td></tr>
+                <tr><td>Formato</td><td>AVIF</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pexels-vanmalidate-769289.jpg</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pexels-vanmalidate-769289.jpg" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-conversion/pexels-vanmalidate-769289.avif" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>350.6 KB</td></tr>
+                <tr><td>Peso final</td><td>149 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">58%</td></tr>
+                <tr><td>Formato</td><td>AVIF</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pexels-vanmalidate-784633.jpg</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pexels-vanmalidate-784633.jpg" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-conversion/pexels-vanmalidate-784633.avif" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>286.5</td></tr>
+                <tr><td>Peso final</td><td>119 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">58%</td></tr>
+                <tr><td>Formato</td><td>AVIF</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pngtree-an-illustration-of-a-plate-full-of-food-on-it-clipart-vector-png-image_6864054.png</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pngtree-an-illustration-of-a-plate-full-of-food-on-it-clipart-vector-png-image_6864054.png" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-conversion/pngtree-an-illustration-of-a-plate-full-of-food-on-it-clipart-vector-png-image_6864054.webp" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>134.9 KB</td></tr>
+                <tr><td>Peso final</td><td>33.1 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">75%</td></tr>
+                <tr><td>Formato</td><td>WebP</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pngtree-burger-street-food-digital-illustration-png-image_14591989.png</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pngtree-burger-street-food-digital-illustration-png-image_14591989.png" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-conversion/pngtree-burger-street-food-digital-illustration-png-image_14591989.webp" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>1.5 MB</td></tr>
+                <tr><td>Peso final</td><td>502 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">65%</td></tr>
+                <tr><td>Formato</td><td>WebP</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pngtree-food-burger-set-png-image_9112014.png</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pngtree-food-burger-set-png-image_9112014.png" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-conversion/pngtree-food-burger-set-png-image_9112014.webp" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>427 KB</td></tr>
+                <tr><td>Peso final</td><td>140 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">67%</td></tr>
+                <tr><td>Formato</td><td>WebP</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>pngtree-sticker-with-a-plate-filled-with-food-and-drinks-clipart-vector-png-image_7026639.png</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/pngtree-sticker-with-a-plate-filled-with-food-and-drinks-clipart-vector-png-image_7026639.png" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-conversion/pngtree-sticker-with-a-plate-filled-with-food-and-drinks-clipart-vector-png-image_7026639.webp" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>29 KB</td></tr>
+                <tr><td>Peso final</td><td>26.7 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">8%</td></tr>
+                <tr><td>Formato</td><td>WebP</td></tr>
+            </table>
+        </article>
+        <article class="card">
+            <h3>taco-acegif-14-hot-taco.gif</h3>
+
+            <div class="imgs">
+                <figure>
+                    <img src="assets/img/compresion/originales/taco-acegif-14-hot-taco.gif" alt="">
+                    <figcaption>Original</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="assets/img/compresion/optimizadas-conversion/taco-acegif-14-hot-taco.webp" alt="">
+                    <figcaption>Optimizada</figcaption>
+                </figure>
+            </div>
+
+            <table>
+                <tr><td>Peso original</td><td>162.2 KB</td></tr>
+                <tr><td>Peso final</td><td>104 KB</td></tr>
+                <tr><td>Reducción</td><td class="good">34%</td></tr>
+                <tr><td>Formato</td><td>WebP</td></tr>
+            </table>
+        </article>
+    </div>
+</section>
+
+
+<section>
+    <h2>Optimización por cambio de tamaño</h2>
+
+    <section>
+         <table class="comparison">
+
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Original</th>
+                <th>1200px/Reducción</th>
+                <th>800px/Reducción</th>
+                <th>500px/Reducción</th>
+                <th>Formato</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td><img src="assets/img/compresion/originales/giphy.gif" alt=""></td>
+                <td>80 KB</td>
+                <td>659.2 KB / +723%</td>
+                <td>375.2 KB / +368%</td>
+                <td>168 KB / +110%</td>
+                <td>GIF</td>
+            </tr>
+            <tr>
+                <td><img src="assets/img/compresion/originales/pexels-ash-craig-122861-376464.jpg" alt=""></td>
+                <td>425.9 KB</td>
+                <td>78.5 KB / 82%</td>
+                <td>42 KB / 90%</td>
+                <td>20.7 KB / 95%</td>
+                <td>JPG</td>
+            </tr>
+            <tr>
+                <td><img src="assets/img/compresion/originales/pexels-daniela-elena-tentis-118658-262959.jpg" alt=""></td>
+                <td>2.6 MB</td>
+                <td>107 KB / 96%</td>
+                <td>57.9 KB / 98%</td>
+                <td>27.8 KB / 99%</td>
+                <td>JPG</td>
+            </tr><tr>
+                <td><img src="assets/img/compresion/originales/pexels-elevate-1267320.jpg" alt=""></td>
+                <td>8.3 MB</td>
+                <td>97.5 KB / 99%</td>
+                <td>53.7 KB / 99%</td>
+                <td>27.2 KB / 99%</td>
+                <td>JPG</td>
+            </tr>
+            <tr>
+                <td><img src="assets/img/compresion/originales/pexels-ella-olsson-572949-1640777.jpg" alt=""></td>
+                <td>1.6 MB</td>
+                <td>148 KB / 91%</td>
+                <td>73.2 KB / 95%</td>
+                <td>33 KB / 98%</td>
+                <td>JPG</td>
+            </tr>
+            <tr>
+                <td><img src="assets/img/compresion/originales/pexels-janetrangdoan-1128678.jpg" alt=""></td>
+                <td>372.2 KB</td>
+                <td>117 KB / 69%</td>
+                <td>61.2 KB / 84%</td>
+                <td>28.7 KB / 92%</td>
+                <td>JPG</td>
+            </tr>
+            <tr>
+                <td><img src="assets/img/compresion/originales/pexels-sydney-troxell-223521-708488.jpg" alt=""></td>
+                <td>252.4 KB</td>
+                <td>100 KB / 60%</td>
+                <td>51.6 KB / 80%</td>
+                <td>23.7 KB / 91%</td>
+                <td>JPG</td>
+            </tr>
+            <tr>
+                <td><img src="assets/img/compresion/originales/pexels-valeriya-842571.jpg" alt=""></td>
+                <td>1.1 MB</td>
+                <td>104 KB / 91%</td>
+                <td>55.7 KB / 95%</td>
+                <td>28.6 KB / 97%</td>
+                <td>JPG</td>
+            </tr>
+            <tr>
+                <td><img src="assets/img/compresion/originales/pexels-valeriya-1199957.jpg" alt=""></td>
+                <td>722.5 KB</td>
+                <td>114 KB / 84%</td>
+                <td>62 KB / 91%</td>
+                <td>30.5 KB / 96%</td>
+                <td>JPG</td>
+            </tr>
+            <tr>
+                <td><img src="assets/img/compresion/originales/pexels-vanmalidate-769289.jpg" alt=""></td>
+                <td>350.6 KB</td>
+                <td>130 KB / 63%</td>
+                <td>68.5 KB / 80%</td>
+                <td>32 KB / 91%</td>
+                <td>JPG</td>
+            </tr>
+            <tr>
+                <td><img src="assets/img/compresion/originales/pexels-vanmalidate-784633.jpg" alt=""></td>
+                <td>286.5 KB</td>
+                <td>181 KB / 37%</td>
+                <td>90.6 KB / 68%</td>
+                <td>41.4 KB / 86%</td>
+                <td>JPG</td>
+            </tr>
+            <tr>
+                <td><img src="assets/img/compresion/originales/pngtree-an-illustration-of-a-plate-full-of-food-on-it-clipart-vector-png-image_6864054.png" alt=""></td>
+                <td>134.9 KB</td>
+                <td>1 MB / +697%</td>
+                <td>585 KB / +334%</td>
+                <td>280 KB / +107%</td>
+                <td>PNG</td>
+            </tr>
+            <tr>
+                <td><img src="assets/img/compresion/originales/pngtree-burger-street-food-digital-illustration-png-image_14591989.png" alt=""></td>
+                <td>1.5 MB</td>
+                <td>1.75 MB / +20%</td>
+                <td>824 KB / 43%</td>
+                <td>359 KB / 75%</td>
+                <td>PNG</td>
+            </tr>
+            <tr>
+                <td><img src="assets/img/compresion/originales/pngtree-food-burger-set-png-image_9112014.png" alt=""></td>
+                <td>427 KB</td>
+                <td>532 KB / +20%</td>
+                <td>722 KB / +69%</td>
+                <td>302 KB / 29%</td>
+                <td>PNG</td>
+            </tr>
+            <tr>
+                <td><img src="assets/img/compresion/originales/pngtree-sticker-with-a-plate-filled-with-food-and-drinks-clipart-vector-png-image_7026639.png" alt=""></td>
+                <td>29 KB</td>
+                <td>940 KB / +3143%</td>
+                <td>507 KB / +1648%</td>
+                <td>240 KB / +729%</td>
+                <td>PNG</td>
+            </tr>
+            <tr>
+                <td><img src="assets/img/compresion/originales/taco-acegif-14-hot-taco.gif" alt=""></td>
+                <td>162.2 KB</td>
+                <td>792.2 KB / +400%</td>
+                <td>477.2 KB / +200%</td>
+                <td>245.8 KB / +55%</td>
+                <td>GIF</td>
+            </tr>
+            
+        </tbody>
+    </table>
+    </section>
+</section>
+
+
+<section class="final">
+    <h2>Reflexión</h2>
+    <p>
+        Tras realizar todas las conversiones, optimizaciones y cambios de tamaño he llegado a las siguientes conclusiones:
+    </p>
+    <ul>
+        <li>WebP es el formato más versátil y el más cómodo para trabajar, aunque AVIF promete</li>
+        <li>Los GIF son inútiles a dia de hoy</li>
+        <li>Los PNG tienen que ser sustituidos por WebP</li>
+    </ul>
+</section>
+
+
+</body>
+</html>

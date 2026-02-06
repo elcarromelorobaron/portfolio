@@ -1,0 +1,374 @@
+:root {
+    --gap-size: 10px;
+    --card-base-size: 120px;
+    --bg-body: #16212b; 
+}
+
+body {
+    background-color: var(--bg-body);
+    font-family: 'Fredoka One', cursive; 
+    margin: 0;
+    padding: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(6, var(--card-base-size));
+    grid-auto-rows: var(--card-base-size); 
+    gap: var(--gap-size);
+    grid-auto-flow: dense; 
+    max-width: 1000px;
+}
+
+
+.header-area {
+    grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.card.wide { grid-column: span 2; }
+.card.tall { grid-row: span 2; }
+
+
+.header-area h1 {
+    font-size: 2.5rem;
+    margin: 0 0 10px 0;
+    line-height: 1;
+}
+
+.summary-link {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    padding: 8px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.summary-link:hover { transform: scale(1.05); }
+.summary-link span { font-weight: 700; margin-left: 5px; }
+
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    perspective: 500px;
+    cursor: pointer;
+}
+
+
+.back {
+    position: absolute;
+    inset: 0;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    z-index: 0;
+}
+
+.front {
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    z-index: 1;
+    
+    
+    transform-origin: left top;
+    transition: transform 1s ease-in-out;
+    backface-visibility: hidden;
+}
+
+.card:hover .front {
+    transform: rotateY(-100deg);
+}
+
+
+
+.style-dark .front {
+    background-color: #2f3029;
+    color: #f5eed7;
+}
+
+
+.style-red-dots .front {
+    background-color: #b73a3b;
+    color: #f5eed7;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 100 100'><circle cx='25' cy='25' r='15' fill='%239B2D2B'/><circle cx='75' cy='75' r='16' fill='%239B2D2B'/></svg>");
+}
+
+
+.style-red-stripes .front {
+    background-color: #b73a3b;
+    color: #f5eed7;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 100 100'><path d='M 0 25 L 25 0 M 0 50 L 50 0 M 0 75 L 75 0 M 0 100 L 100 0 M 0 125 L 125 0 M 0 150 L 150 0 M 0 175 L 175 0' stroke='%239B2D2B' stroke-width='6' /></svg>");
+}
+
+.style-beige .front {
+    background-color: #f5eed7;
+    color: #252721;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='47.5' height='47.5' viewBox='0 0 100 100'><path d='M 25 10 L 25 17 M 25 33 L 25 40 M 10 25 L 17 25 M 33 25 L 40 25' stroke='%23CD803D' stroke-width='6' stroke-linecap='round' /><circle cx='75' cy='75' r='4' fill='%23CD803D'/></svg>");
+}
+
+
+.style-green .front {
+    background-color: #b7c7b0; 
+    color: #252721;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 120 120'><polygon fill='%2393A891' points='120 120 60 120 90 90 120 60 120 0 120 0 60 60 0 0 0 60 30 90 60 120 120 120 '/></svg>");
+}
+
+.style-special .front {
+    background-color: #16212b;
+    color: #f5eed7;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 900px) {
+    .main-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .main-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .header-area {
+        grid-column: span 2;
+    }
+}
+
+.head {
+  fill: #cd803d;
+}
+
+.eye {
+  fill: white;
+}
+
+.mouth {
+  fill: none;
+  stroke: white;
+  stroke-width: 2px;
+}
+
+.limb {
+  stroke: #cd803d;
+  stroke-width: 35px;
+  stroke-linecap: round;
+}
+
+.house {
+  stroke: black;
+  stroke-width: 2px;
+  fill: white;
+}
+
+.house .roof {
+  fill: none;
+  stroke: #d1495b;
+  stroke-width: 10px;
+  stroke-linecap: round;
+}
+
+.house .door {
+  fill: #d1495b;
+}
+
+.house .stair {
+  fill: gray;
+}
+
+.house .window {
+  fill: #fdea96;
+}
+
+.house .window-sill {
+  fill: #d1495b;
+  stroke-linecap: round;
+}
+
+.box {
+  fill: #d1495b;
+  stroke: black;
+  stroke-width: 2px;
+}
+
+.stripe {
+  fill: white;
+  stroke: black;
+  stroke-width: 2px;
+}
+
+.ribbon {
+  stroke: #b73a3b;
+  stroke-width: 4px;
+  fill: none;
+}
+
+.bear {
+  background-color: #f5eed7;
+}
+
+.bear .ear {
+  fill: #e5c39c;
+  stroke: white;
+  stroke-width: 5;
+}
+
+.bear .face {
+  fill: white;
+}
+
+.bear .mouth {
+  fill: none;
+  stroke: black;
+  stroke-width: 2;
+}
+
+
+#windmill-head {
+  animation-name: rotate;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#bell {
+  transform-origin: 0 -45px;
+}
+
+svg:hover #bell,
+svg:hover #bell-clapper {
+  animation-duration: 0.5s;
+  animation-delay: -0.25s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-name: ring;
+}
+
+@keyframes ring {
+  from {
+    transform: rotate(-20deg);
+  }
+  to {
+    transform: rotate(20deg);
+  }
+}
+
+.sleigh {
+  offset-path: path(
+    "M-200 80 L -90 80 Q 60 80 60 -10 A 50 50 0 0 0 -60 -10 Q -60 80 90 80 L 200 80"
+  );
+  animation: roller-coaster 6000ms infinite linear;
+}
+
+@keyframes roller-coaster {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+.background {
+  background-color: #38755b;
+  width: 100%;
+  height: 100%;
+  background-size: 50px 50px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 120 120'%3E%3Cpolyline fill='none' stroke='%230c5c4c' stroke-width='42.4' points='-30 0 60 90 150 0' /%3E%3C/svg%3E");
+}
+
+.snowflake {
+  --duration: 5s;
+}
+
+.snowflake.fast {
+  --duration: 3s;
+}
+
+.snowflake {
+  animation-duration: var(--duration);
+  animation-name: snowing;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: calc(-1 * var(--duration) * (var(--y) / 200));
+}
+
+@keyframes snowing {
+  from {
+    transform: translate(0, -100px);
+  }
+  to {
+    transform: translate(0, 100px);
+  }
+}
+
+.btn-back {
+      position: absolute; 
+      top: 30px;
+      left: 30px;
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.2); 
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(5px); 
+      z-index: 1000; 
+    }
+
+    .btn-back:hover {
+      background: white;
+      color: #ff512f; 
+      transform: scale(1.1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+.card-static {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.card-static:hover {
+    transform: scale(0.98);
+}
